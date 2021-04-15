@@ -1,0 +1,247 @@
+body,
+html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("student3_quiz_images/background_img_bp.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+}
+
+.container span {
+  color: white;
+  display: block;
+}
+
+/*header design*/
+
+.header1 {
+  font-size: 60px;
+  font-family: "Times New Roman", Times, serif, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 9px;
+  position: relative;
+  background-blend-mode: normal;
+  color: white;
+  text-shadow: 5px 5px 5px grey;
+  margin-bottom: 20px;
+}
+
+/*header design*/
+
+.header2 {
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: 2px 2px 5px grey;
+}
+
+/*button design*/
+
+.button1 {
+  text-align: center;
+  position: absolute;
+  top: 140%;
+  left: 44%;
+  border-radius: 4px;
+  background-color: #81082e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button1:hover {
+  color: white;
+}
+
+.button1:hover {
+  opacity: 0.8;
+  box-shadow: 0 1px black;
+  background-color: #a1274d;
+  transform: translateY(2px);
+}
+
+/*button design*/
+
+.button2 {
+  text-align: center;
+  position: absolute;
+  top: 120%;
+  left: 44%;
+  border-radius: 4px;
+  background-color: #81082e;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button2:hover {
+  color: white;
+}
+
+.button2:hover {
+  opacity: 0.8;
+  box-shadow: 0 1px black;
+  background-color: #a1274d;
+  transform: translateY(2px);
+}
+
+/*instruction design*/
+
+.instruction_1 {
+  animation: typewriter 4s steps(50) 1s 1 normal both,
+    blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+/* Animation */
+
+.instruction_1 {
+  animation: animated-text 2s steps(30, end) 1s 1 normal both;
+  overflow: hidden;
+  top: 30%;
+  margin: 0 auto;
+  font-size: 20px;
+  position: relative;
+  white-space: nowrap;
+  color: white;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 472px;
+  }
+}
+
+.instruction_1 {
+  animation: typewriter 4s steps(50) 1s 1 normal both,
+    blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+/* Animation */
+
+.instruction_1 {
+  animation: animated-text 2s steps(30, end) 1s 1 normal both;
+  overflow: hidden;
+  margin-top: 340px;
+  font-size: 20px;
+  position: relative;
+  white-space: nowrap;
+  color: black;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 472px;
+  }
+}
+
+/*instruction design*/
+
+.instruction_2 {
+  animation: typewriter 4s steps(50) 1s 1 normal both,
+    blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+/* Animation */
+
+.instruction_2 {
+  animation: animated-text 2s steps(30, end) 1s 1 normal both;
+  overflow: hidden;
+  top: 30%;
+  margin: 0 auto;
+  font-size: 20px;
+  position: relative;
+  white-space: nowrap;
+  color: black;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 472px;
+  }
+}
+
+.instruction_3 {
+  animation: typewriter 4s steps(50) 1s 1 normal both,
+    blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+/* Animation */
+
+.instruction_3 {
+  animation: animated-text 2s steps(30, end) 1s 1 normal both;
+  overflow: hidden;
+  top: 30%;
+  margin: 0 auto;
+  font-size: 20px;
+  position: relative;
+  white-space: nowrap;
+  color: black;
+}
+
+/* text animation */
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 472px;
+  }
+}
+
+.instruction_1 {
+  animation-delay: 1s;
+}
+
+.instruction_2 {
+  animation-delay: 4.8s;
+}
+
+.instruction_3 {
+  animation-delay: 8s;
+}
+
+a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}

@@ -1,0 +1,377 @@
+    body,
+    html {
+        height: 100%;
+    }
+    /*design of the body and background image*/
+    
+    body {
+        background-image: url("student3_quiz_images/background_img_bp_blur.jpg");
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    /*design of question box*/
+    
+    .question-box {
+        margin: auto;
+        width: 650px;
+        height: 470px;
+        background-color: #d3d3d3;
+        padding: 20px;
+        border-color: #4d004d;
+        border-radius: 5%;
+    }
+    /*design of the question number which appears in top of the question box*/
+    
+    .number-of-the-question {
+        font-size: 22px;
+        border-bottom: 2px solid #81082e;
+        margin: 0;
+        color: #650322;
+        padding-bottom: 20px;
+        color: #900C3F;
+    }
+    /*design of the question */
+    
+    .question {
+        font-size: 20px;
+        color: black;
+        padding: 10px 0;
+    }
+    /*design of the MCQ answers*/
+    
+    .answers div {
+        border-style: solid;
+        border-color: #650322;
+        box-shadow: 5px 5px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        background-color: white;
+        font-size: 16px;
+        border-radius: 5px;
+        color: black;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .answers div.disabled {
+        pointer-events: none;
+    }
+    
+    .answers div.correct {
+        z-index: 1;
+        color: #fff;
+    }
+    
+    .answers div.correct::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: green;
+        z-index: -1;
+        animation: fadingColor 1s ease;
+    }
+    
+    .answers div.wrong {
+        z-index: 1;
+        color: #fff;
+    }
+    
+    .answers div.wrong::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        z-index: -1;
+        animation: fadingColor 1s ease;
+    }
+    
+    @keyframes fadingColor {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes fadingColor {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    /*designing next button*/
+    
+    .buttons-of-question-box .next-button {
+        border-radius: 5px;
+        padding: 10px 40px;
+        background-color: #81082e;
+        font-size: 16px;
+        color: #fff;
+        border: none;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    /*hover effect for the button*/
+    
+    .next-button:hover {
+        color: white;
+    }
+    
+    .next-button:hover {
+        opacity: 0.8;
+        box-shadow: 0 1px black;
+        background-color: #a1274d;
+        transform: translateY(2px);
+    }
+    /*designing skip button*/
+    
+    .buttons-of-question-box .skip-button {
+        border-radius: 5px;
+        padding: 10px 40px;
+        background-color: #81082e;
+        font-size: 15px;
+        color: #fff;
+        border: none;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    /*hover effect for the button*/
+    
+    .skip-button:hover {
+        color: white;
+    }
+    
+    .skip-button:hover {
+        opacity: 0.8;
+        box-shadow: 0 1px black;
+        background-color: #a1274d;
+        transform: translateY(2px);
+    }
+    /*interface of quiz ending box - high marks*/
+    
+    .quiz-end-interface-high-marks {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(28, 117, 98, 0.9);
+        z-index: 10;
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .quiz-end-interface-high-marks.show {
+        display: flex;
+    }
+    
+    .quiz-end-interface-high-marks .box {
+        top: 30%;
+        background-color: #d3d3d3;
+        padding-top: 20%;
+        margin-top: 30px;
+        border-radius: 10px;
+        max-width: 500px;
+        max-height: 300px;
+        flex-basis: 500px;
+        margin: auto;
+        width: 50%;
+        border: 5px solid black;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .quiz-end-interface-high-marks .box h1 {
+        color: #fff;
+        font-size: 30px;
+        margin: 0 0 20px;
+    }
+    /* design of the buttons of quiz ending high marks box*/
+    
+    .quiz-end-interface-high-marks .box button {
+        padding: 15px 50px;
+        font-size: 20px;
+        color: white;
+        width: 200px;
+        border: #81082e;
+        background-color: #81082e;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+    }
+    /*hover effects of buttons*/
+    
+    .exit-law:hover {
+        color: white;
+    }
+    
+    .exit-law:hover {
+        opacity: 0.8;
+        box-shadow: 0 1px black;
+        background-color: #a1274d;
+        transform: translateY(2px);
+    }
+    
+    .try-again-law:hover {
+        color: white;
+    }
+    
+    .try-again-law:hover {
+        opacity: 0.8;
+        box-shadow: 0 1px black;
+        background-color: #a1274d;
+        transform: translateY(2px);
+    }
+    /*interface of quiz ending box - law marks*/
+    
+    .quiz-end-interface-law-marks {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 107, 107, 0.9);
+        z-index: 10;
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .quiz-end-interface-law-marks .box {
+        top: 30%;
+        background-color: #d3d3d3;
+        padding-top: 20%;
+        margin-top: 30px;
+        border-radius: 10px;
+        max-width: 500px;
+        max-height: 300px;
+        flex-basis: 500px;
+        margin: auto;
+        width: 50%;
+        border: 5px solid black;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .quiz-end-interface-law-marks .box h1 {
+        color: #fff;
+        font-size: 30px;
+        margin: 0 0 20px;
+        height: auto;
+    }
+    
+    .quiz-end-interface-law-marks.show {
+        display: flex;
+    }
+    /*quiz end interface law marks buttons*/
+    
+    .quiz-end-interface-law-marks .box button {
+        padding: 15px 50px;
+        margin-top: 30px;
+        font-size: 20px;
+        color: white;
+        width: 200px;
+        border: #81082e;
+        background-color: #81082e;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+    }
+    /*colors of the quiz ending boxes*/
+    
+    .correct-count-law {
+        color: green;
+    }
+    
+    .incorrect-count-law {
+        color: red;
+    }
+    
+    .incorrect-count-high {
+        color: red;
+    }
+    
+    .correct-count-high {
+        color: green;
+    }
+    
+    .correct-answers-law {
+        color: #cf6b0e;
+    }
+    
+    .correct-answers-high {
+        color: #cf6b0e;
+    }
+    
+    .total-time-taken-law {
+        color: green;
+    }
+    
+    .total-time-taken-high {
+        color: green;
+    }
+    
+    .time-remaining {
+        margin-top: 10PX;
+    }
+    
+    .exit-high:hover {
+        color: white;
+    }
+    /*button hovers*/
+    
+    .exit-high:hover {
+        opacity: 0.8;
+        box-shadow: 0 1px black;
+        background-color: #a1274d;
+        transform: translateY(2px);
+    }
+    
+    .try-again-high:hover {
+        color: white;
+    }
+    
+    .try-again-high:hover {
+        opacity: 0.8;
+        box-shadow: 0 1px black;
+        background-color: #a1274d;
+        transform: translateY(2px);
+    }
+    /*design of the countdown position*/
+    
+    .time-for-one-question {
+        margin-top: 0%;
+        border-top: solid #4d004d;
+        float: right;
+        border: 2px solid #650322;
+        font-weight: 900;
+        font-size: 24px;
+        color: black;
+        text-align: center;
+        border-color: #650322;
+        height: 40px;
+        width: 40px;
+        line-height: 35px;
+        border-radius: 50%;
+    }
+    /*color change of last seconds of the countdown(last 5 seconds)*/
+    
+    .last-time-red-color {
+        color: #b30000;
+    }
