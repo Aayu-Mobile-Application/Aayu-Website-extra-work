@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <link rel="stylesheet" href="student2_main3.css">
     <link rel="stylesheet" href="student3_quiz.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-    
+
     <title>Quiz Challenge</title>
 </head>
 
@@ -16,215 +17,237 @@
 
 <body>
     <div id="zoomBtn">
-    <!-- menu button -->
+        <!-- menu button -->
 
-    <div class="menuBtn">
-        <p>Menu</p>
-        <img src="menu.png" alt="menu" width="25px" height="20px">
-    </div>
-  
-       
+        <div class="menuBtn">
+            <p>Menu</p>
+            <img src="menu.png" alt="menu" width="25px" height="20px">
+        </div>
+
+
+        <!-- menu Bar -->
+
+        <div class="menuBtn">
+            <p>Menu</p>
+            <img src="menu.png" alt="menu" width="25px" height="20px">
+        </div>
+
+
         <!-- menu Bar -->
 
         <nav class="main">
-            <!-- <img src="T2.png" alt="travel logo" class="logo"> -->
+            <img src="T2.png" alt="travel logo" class="logo">
             <ul class="main-menu">
-                <li><a href="../../student2/main/student2_main.html">Home</a></li>
-                <li><a href="../../student1/Student1_Product/Student1_Product.html">Products</a></li>
-                <li><a href="../student3_quiz/student3_quiz_home.html">Quiz Hub</a></li>
-                <li><a href="../../student1/Student1_Product/Student1_Product.html#cart-section">Cart</a></li>
-                <li><a href="../../student4/SiteMap/sitemapSource.html">Site Map</a></li>
-                <li><a href="../student3_team/student3_team.html">Team</a></li>
-                <li><a href="../../student4/Gallery/Normal/gallerySourceOne.html">Gallery</a></li>
-                              
+                <li><a href="student2_main.html">Home</a></li>
+                <li><a href="../../student1/Student1_Product/Student1_Product.html">Aayu Map</a></li>
+                <li><a href="../../student3/student3_quiz/student3_quiz_home.html">Quiz Challenge</a></li>
+                <li><a href="../../student1/Student1_Product/Student1_Product.html#cart-section">Explore Aayu</a></li>
+                <li><a href="../../student4/Gallery/Normal/gallerySourceOne.html">Aayu About</a></li>
             </ul>
 
-<ul class="menuRgt">
-    <p>Zoom</p>
-    <button id="bigger" class="zoom" onclick="bigFont()"> + </button>
-    <button id="smaller" class="zoom" onclick="smallFont()"> - </button>
-    
-</ul>
 
         </nav>
 
-<!-- Content  -->
+        <!-- Content  -->
 
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
-<div class="container" >
-    <!-- <div class=inner-content> -->
-<div class="question-box">
+        <div class="container">
+            <!-- <div class=inner-content> -->
+            <div class="question-box">
 
-    <!-- Countdown of th questions -->
-   <div class="time-for-one-question">
-        <div class="remaining-time"></div>
-    </div>
+                <!-- Countdown of th questions -->
+                <div class="time-for-one-question">
+                    <div class="remaining-time"></div>
+                </div>
 
-    <!-- number of the question (1 to 10) -->
-    <div class="number-of-the-question">
-    Question <span class="value-of-the-question-number">  </span>
-    </div>
+                <!-- number of the question (1 to 10) -->
+                <div class="number-of-the-question">
+                    Question <span class="value-of-the-question-number"> </span>
+                </div>
 
-    <!-- question -->
-    <div class="question">
-    </div>
+                <!-- question -->
+                <div class="question">
+                </div>
 
-    <!-- multiple answers -->
-    <div class="answers">
-    <div id="0" class="option1 "  onclick="check(this)"></div>
-    <div id="1" class="option2 "  onclick="check(this)"></div>
-    <div id="2" class="option3 "  onclick="check(this)"></div>
-    <div id="3" class="option4 "  onclick="check(this)"></div>
-    </div>
-    
-    <!-- buttons of the question box -->
-    <div class="buttons-of-question-box">
-    <button type="button" class="next-button" onclick="soundOfButton();next()"> NEXT</button>
-    <button type="button" class="skip-button" onclick="soundOfButton();skip()"> SKIP</button>
-    </div>
+                <!-- multiple answers -->
+                <div class="answers">
+                    <div id="0" class="option1 " onclick="check(this)"></div>
+                    <div id="1" class="option2 " onclick="check(this)"></div>
+                    <div id="2" class="option3 " onclick="check(this)"></div>
+                    <div id="3" class="option4 " onclick="check(this)"></div>
+                </div>
 
-</div>
+                <!-- buttons of the question box -->
+                <div class="buttons-of-question-box">
+                    <button type="button" class="next-button" onclick="soundOfButton();next()"> NEXT</button>
+                    <button type="button" class="skip-button" onclick="soundOfButton();skip()"> SKIP</button>
+                </div>
 
-<!-- quiz over interface of high marks(over or eqaul 10 marks) -->
-<div class="quiz-end-interface-high-marks">
+            </div>
 
-<div class="box">
+            <!-- quiz over interface of high marks(over or eqaul 10 marks) -->
+            <div class="quiz-end-interface-high-marks">
 
-<!-- content of quiz over box( high marks ) -->
-<h2>Done! <br><br>You got <span class="correct-answers-high"> </span> out of 20 points</h2>
-<h2>Elapsed Time Is <span class="total-time-taken-high"> Seconds. </span></h2>
-<h2>Total no of Correct Answers are  <span class="correct-count-high"> </span></h2>
-<h2>Total no of Incorrect Answers are <span class="incorrect-count-high"></span></h2>
+                <div class="box">
 
-<br>
+                    <!-- content of quiz over box( high marks ) -->
+                    <h2>Done! <br><br>You got <span class="correct-answers-high"> </span> out of 20 points</h2>
+                    <h2>Elapsed Time Is <span class="total-time-taken-high"> Seconds. </span></h2>
+                    <h2>Total no of Correct Answers are <span class="correct-count-high"> </span></h2>
+                    <h2>Total no of Incorrect Answers are <span class="incorrect-count-high"></span></h2>
 
-<!-- buttons quiz over box( high marks ) -->
-<button type="button" class="try-again-high" onclick="tryAgain()">Try Again</button>
-<button type="button" class="exit-high" onclick="exit()">Exit</button>
+                    <br>
 
-</div> 
-</div>
+                    <!-- buttons quiz over box( high marks ) -->
+                    <button type="button" class="try-again-high" onclick="tryAgain()">Try Again</button>
+                    <button type="button" class="exit-high" onclick="exit()">Exit</button>
+                    <br>
+                </div>
+            </div>
+            <br>
+            <!-- quiz over interface of law marks(below 10 marks) -->
+            <div class="quiz-end-interface-law-marks">
 
-<!-- quiz over interface of law marks(below 10 marks) -->
-<div class="quiz-end-interface-law-marks">
+                <div class="box">
 
-<div class="box">
+                    <!-- content of quiz over box( law marks ) -->
+                    <h2>Done! <br><br>You got <span class="correct-answers-law"> </span> out of 20 points.</h2>
+                    <h2>Elapsed Time Is <span class="total-time-taken-law"></span></h2>
+                    <h2>Total no of Correct Answers are <span class="correct-count-law"> </span></h2>
+                    <h2>Total no of Wrong Answers are <span class="incorrect-count-law"></span></h2>
 
-<!-- content of quiz over box( law marks ) -->
-<h2>Done! <br><br>You got <span class="correct-answers-law"> </span> out of 20 points.</h2>
-<h2>Elapsed Time Is <span class="total-time-taken-law"></span></h2>
-<h2>Total no of Correct Answers are  <span class="correct-count-law"> </span></h2>
-<h2>Total no of Wrong Answers  are  <span class="incorrect-count-law"></span></h2>
+                    <!-- buttons of quiz over box( law marks ) -->
+                    <button type="button" class="try-again-law" onclick="tryAgain()">Try Again</button>
+                    <button type="button" class="exit-law" onclick="exit()">Exit</button>
 
-<!-- buttons of quiz over box( law marks ) -->
-<button type="button"  class="try-again-law" onclick="tryAgain()">Try Again</button>
-<button type="button" class="exit-law" onclick="exit()">Exit</button>
+                    <!-- connecting css stylesheet to the html page -->
+                    <link rel="stylesheet" type="text/css" href="cw_css_3.css">
 
-<!-- connecting css stylesheet to the html page -->
-<link rel="stylesheet" type="text/css" href="cw_css_3.css">
+                    <!-- connecting javascipt to the html page -->
+                    <script type="text/javascript" src="cw_js_3.js"></script>
 
-<!-- connecting javascipt to the html page -->
-<script type="text/javascript" src="cw_js_3.js"></script>
-
-</div> 
-</div>
-</div>
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-<!-- footer -->
-
-<div class="footer">
-    <button onclick="backtopFunction()" id="topbtn" class="buttonbt"><img src='arw.png' width="16px" height="16px" >  Back to Top</button></i>
-    <div class="in-footer">
-        <div class="footer-items">
-            <h2>Quick Access</h2>
-            <div class="border"></div>
-            <ul>
-                <a href="../../student2/main/student2_main.html"><li>Home</li></a>
-                <a href="../../student1/Student1_Product/Student1_Product.html"><li>Products</li></a>
-                <a href="../../student1/Student1_Product/Student1_Product.html#cart-section"><li>Cart</li></a>
-                <a href="../student3_quiz/student3_quiz_home.html"><li>Quiz Challenge</li></a>
-                <a href="../student3_team/student3_team.html"><li>Team</li></a>
-    
-            </ul>
-        </div>
-        <div class="footer-items">
-            <h2>Developer Info</h2>
-            <div class="border"></div>
-            <ul>
-                <a href="../student3_team/student3_team.html"><li>Members Info</li></a>
-                <a href="../student3_team_Page_Editor/page-editor.html"><li>Page Editor</li></a>
-                <a href="../../student4/SiteMap/sitemapSource.html"><li>Site Map</li></a>
-                <a href="#"><li>Web Reports</li></a>
-                
-                 
-            </ul>
-        </div>
-        <div class="footer-items">
-            <h2>Contact Us</h2>
-            <div class="border"></div>
-            <div class="social">
-                <a href="https://www.facebook.com/travelmania.quiz.3"><img src='fb.png' width="42px" height="40px" ></a>
-                <a href="https://www.linkedin.com/login"><img src='lin.png' width="42px" height="40px" ></a>
-                <a href="https://www.instagram.com/travelmaniatravelling/"><img src='ins.png' width="42px" height="40px" ></a>
-                <a href="https://twitter.com/login?lang=en"><img src='tw.png' width="42px" height="40px" ></a>
-                <a href="https://web.whatsapp.com/"><img src='wha.png' width="42px" height="40px" ></a>
+                </div>
             </div>
         </div>
-    <div class="footer-items">
-        <h2>Support</h2>
-        <div class="border"></div>
-        <div class="social-media">
-            <ul>
-            <a href="../../student2/form/student2_form.html"><li> Rate Us Now</li></a>
-            </ul>
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+        <!-- footer -->
+
+        <div class="footer">
+            <button onclick="backtopFunction()" id="topbtn" class="buttonbt"><img src='arw.png' width="16px"
+                    height="16px"> Back to Top</button></i>
+            <div class="in-footer">
+                <div class="footer-items">
+                    <h2>Quick Access</h2>
+                    <div class="border"></div>
+                    <ul>
+                        <a href="student2_main.html">
+                            <li>Home</li>
+                        </a>
+                        <a href="../Map/map.html">
+                            <li>Aayu Map</li>
+                        </a>
+                        <a href="../Quiz/student3_quiz_home.html">
+                            <li>Quiz Challenge</li>
+                        </a>
+                        <a href="../Description/des.html">
+                            <li>Explore Aayu</li>
+                        </a>
+                        <a href="../About/about.html">
+                            <li>Aayu About</li>
+                        </a>
+
+                    </ul>
+                </div>
+                <div class="footer-items">
+                    <h2>Developer Info</h2>
+                    <div class="border"></div>
+                    <ul>
+                        <a href="../../student3/student3_team/student3_team.html">
+                            <li>Members Info</li>
+                        </a>
+                        <a href="../editor/page-editor.html">
+                            <li>Page Editor</li>
+                        </a>
+                        <a href="../../student4/SiteMap/sitemapSource.html">
+                            <li>Site Map</li>
+                        </a>
+                        <a href="#">
+                            <li>Web Reports</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="footer-items">
+                    <h2>Contact Us</h2>
+                    <div class="border"></div>
+                    <div class="social">
+                        <a href="https://www.facebook.com/travelmania.quiz.3"><img src='fb.png' width="42px"
+                                height="40px"></a>
+                        <a href="https://www.linkedin.com/login"><img src='lin.png' width="42px" height="40px"></a>
+                        <a href="https://www.instagram.com/travelmaniatravelling/"><img src='ins.png' width="42px"
+                                height="40px"></a>
+                        <a href="https://twitter.com/login?lang=en"><img src='tw.png' width="42px" height="40px"></a>
+                        <a href="https://web.whatsapp.com/"><img src='wha.png' width="42px" height="40px"></a>
+                    </div>
+                </div>
+
+                <div class="footer-items">
+                    <h2>Support</h2>
+                    <div class="border"></div>
+                    <div class="social-media">
+                        <ul>
+                            <a href="../form/student2_form.html">
+                                <li> Aayu Help</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-            Copyright &copy; travelmania.co    2020. All right reserved.
+    <div class="footer-bottom">
+        Copyright &copy; Aayu.co 2021. All right reserved.
     </div>
-</div>
-</div>
+    </div>
+    </div>
 
 
-<!-- JS script -->
-<script >
+    <!-- JS script -->
+    <script>
 
-    var result = document.getElementById("zoomBtn");
-    
-    var currentText = 20;
-    
-    function bigFont() {
-     ++currentText;
-     result.style.fontSize = currentText + 'px';
-    }
-    
-    function smallFont() {
-     --currentText;
-     result.style.fontSize = currentText + 'px';
-    }
+        var result = document.getElementById("zoomBtn");
+
+        var currentText = 20;
+
+        function bigFont() {
+            ++currentText;
+            result.style.fontSize = currentText + 'px';
+        }
+
+        function smallFont() {
+            --currentText;
+            result.style.fontSize = currentText + 'px';
+        }
 
 
-    
-    //menu button for scales <700px
-    
-    document.querySelector(".menuBtn").addEventListener
-     ("click",()=> document.querySelector(".main-menu").classList.toggle("show"));
-    
-           //back to top button
-           var topbutton = document.getElementById("topbtn");
-    
-    function backtopFunction(){
-     document.body.scrollTop = 0;
-     document.documentElement.scrollTop = 0;
-    }
-        </script>
-        <script type="text/javascript" src="student3_quiz.js"></script>
+
+        //menu button for scales <700px
+
+        document.querySelector(".menuBtn").addEventListener
+            ("click", () => document.querySelector(".main-menu").classList.toggle("show"));
+
+        //back to top button
+        var topbutton = document.getElementById("topbtn");
+
+        function backtopFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script type="text/javascript" src="student3_quiz.js"></script>
 
 </body>
+
 </html>
