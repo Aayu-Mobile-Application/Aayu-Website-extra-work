@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="student2_main.js" defer></script>
+    <script src="map.js" defer></script>
     <link rel="stylesheet" href="student2_main.css">
+    <link rel="stylesheet" href="map.css">
     <title>Aayu</title>
+    
+    
+          
 </head>
 <body>
     <div id="zoomBtn">
@@ -33,17 +38,16 @@
 
 <!-- zoom button -->
 
-<ul class="menuRgt">
-    <p>Zoom</p>
-    <button id="bigger" class ="zoom" onclick="bigFont()"> + </button>
-    <button id="smaller" class="zoom" onclick="smallFont()"> - </button>
-    
-</ul>
         </nav>
 <!-- end of header bar -->
 
+<div id="searchbox">
+    <input type="text" id="namesearch" name="name" placeholder="Search for Plant">
+    <button type="button" id="searchbutton" onclick="myFunction()">Search</button>
 
+</div>
 
+<div id="map"></div>
 
 
 
@@ -117,4 +121,9 @@
 </div>
 </div>
 </body>
+<script
+      <!-- src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhc84YoOi8nKfHqGBzgwFlbh36uE9_7p8&callback=initMap&libraries=&v=weekly" -->
+      async
+    ></script>
+
 </html>
