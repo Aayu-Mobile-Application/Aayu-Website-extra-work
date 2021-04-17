@@ -17,7 +17,9 @@ function initMap() {
 
   
   function myFunction() {
-    fetch('https://mocki.io/v1/6b0cd774-42d4-49c8-897b-28c32112ebb4', {
+    var plantName = document.getElementsByClassName('nameOfThePlant').innerText;
+    console.log(plantName)
+    fetch('https://aayu-backend-api.herokuapp.com/location/' + plantName, {
         mode: "no-cors",
         method: "GET",
         headers: {
@@ -37,6 +39,33 @@ function initMap() {
       })
       .catch(error => { console.log('request failed', error); });
   }
+
+  
+  // $(function () {
+
+  //   $.ajax({
+  //     type: 'GET',
+  //     url: 'http://localhost:8090/location/jamun',
+  //     success: function(data){
+  //       console.log(data);
+  //     }
+  //   })
+
+
+  // });
+
+  // function myFunction(){
+  
+  //   $.ajax({
+
+  //     url: 'https://aayu-backend-api.herokuapp.com/location/jamun',
+  //     type: "GET",
+  //     success: function(data){
+  //       console.log(data);
+  //     }
+  //   })
+  // }
+
   function addMarker(location, map,plantName) {
     var marker = new google.maps.Marker({
         position: location,
